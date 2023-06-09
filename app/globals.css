@@ -47,6 +47,8 @@ button:focus-visible {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 1em 3em;
 }
 
 @media (prefers-color-scheme: light) {
@@ -60,4 +62,24 @@ ul {
   button {
     background-color: #f9f9f9;
   }
+}
+li {
+  padding: 0.5rem 1.5rem 1rem;
+  border-radius: 0.5rem;
+  background: peachpuff;
+}
+
+li + li {
+  margin-top: 1rem;
+}
+
+li span {
+  margin: 0 1.5em;
+}
+
+form input {
+  margin-right: 1em;
+  height: 2em;
+  font-size: 1em;
+  padding-left: 0.5em;
 }

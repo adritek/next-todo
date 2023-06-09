@@ -34,35 +34,55 @@ export default function Home({ params: { lng } }) {
     setInputValue(event.target.value);
   };
 
-  const handleAddTodo = () => {
-    if (inputValue == '' || inputValue == null) return;
-    setTodos([...todos, inputValue]);
-    localStorage.setItem('TASKS', JSON.stringify(todos));
-    setInputValue('');
-  };
-
   const handleDeleteTodo = (index) => {
     const updatedTodos = todos.filter((ignored, todoIndex) => todoIndex !== index);
     setTodos(updatedTodos);
   };
-  const handleCheckChange = () => {
-    console.log('click');
+
+  // form submit
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (inputValue === '' || inputValue === null) return;
+
+    const updatedTodos = [...todos, { title: inputValue, checked: false }];
+    setTodos(updatedTodos);
+    setInputValue('');
   };
+
+  const handleCheckboxChange = (index) => {
+    const updated = todos.map((todo, todoIndex) => {
+      if (index === todoIndex) {
+        return {
+          ...todo,
+          checked: !todo.checked,
+        };
+      }
+      return todo;
+    });
+    setTodos(updated);
+  };
+
   return (
     <div>
       <h1>{t('title')}</h1>
-      <input type="text" value={inputValue} onChange={handleInputChange} />
-      <button onClick={handleAddTodo}>+</button>
+
+      <form onSubmit={handleFormSubmit}>
+        <input type="text" value={inputValue} onChange={handleInputChange} placeholder={t('Add new todo')} />
+        <button type="submit">+</button>
+      </form>
+
       <ul>
         {todos.map((todo, index) => (
           <li key={index}>
-            <input type="checkbox" checked={todo.checked} onChange={handleCheckChange} />
+            <input type="checkbox" checked={todo.checked} onChange={() => handleCheckboxChange(index)} />
             <span>{todo.title}</span>
             <button onClick={() => handleDeleteTodo(index)}>X</button>
           </li>
         ))}
       </ul>
+
       <br />
+
       <Link href={`/${lng}/client-page`}>{t('to-client-page')}</Link>
       <Footer lng={lng} />
     </div>
