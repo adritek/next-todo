@@ -33,11 +33,6 @@ Start the app
 [![github](https://img.shields.io/badge/github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/adritek)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adrian-rogers/)
 
-## Screenshots
-
-Before I approach any task, I do a little sketch.
-![Process](./public/assets/wireframes.jpg)
-
 ## Lessons Learned
 
 - Always use form data, it's easier
