@@ -1,34 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Todo list with Nextjs
 
-## Getting Started
+A SSR todo list app made with Nextjs and includes i18n!
 
-First, run the development server:
+## Acknowledgements
+
+- [READMEO.SO](https://readme.so)
+
+## Author
+
+- [@adritek - github](https://www.github.com/adritek)
+- [@adrian-rogers LinkedIn](https://www.linkedin.com/in/adrian-rogers/)
+
+## Installation
+
+This project uses React v18.2.0+  
+Clone the repo then open a terminal in the root folder, and install App dependancies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run Locally
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Start the app
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+  npm start
+```
 
-## Learn More
+## 🔗 Links
 
-To learn more about Next.js, take a look at the following resources:
+[![github](https://img.shields.io/badge/github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/adritek)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adrian-rogers/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Screenshots
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Before I approach any task, I do a little sketch.
+![Process](./public/assets/wireframes.jpg)
 
-## Deploy on Vercel
+## Lessons Learned
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Always use form data, it's easier
+- useEffect requires 'use client', and client pages don't like async so much
+- to add data context, add typescript
